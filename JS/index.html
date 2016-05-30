@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Calc Example</title>
+    <script src="js/model.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body>
+    <h1>Calculator Demo</h1>
+    <table>
+        <tr>
+            <td><label for="firstNumber">FirstNo</label></td>
+            <td><input type="text" placeholder="Type First Number" id="firstNumber"></td>
+            
+        </tr>
+          <tr>
+            <td><label for="secondNumber">SecondNo</label></td>
+            <td><input type="text" placeholder="Type Second Number" id="secondNumber"></td>
+            
+        </tr>
+        <tr>
+            <td><!--<button id="add" onclick="doCalculation('Add')">Add</button>--><button data-operation="+" id="add" >Add</button></td>
+            <td><!--<button id="subtract" onclick="doCalculation('Subtract')">Subtract</button>--><button data-operation="-" id="subtract" >Subtract</button></td>
+            
+        </tr>
+    </table>
+    <h1 id="result"></h1>
+</body>
+</html>
