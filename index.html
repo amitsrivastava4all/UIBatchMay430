@@ -1,0 +1,75 @@
+<html>
+<head>
+   <style>
+       .mycolor{
+        color: red;
+        background-color: aqua;
+        font-weight: bold;
+        font-size: 3em;   
+       }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+     $("#classdemo h1").hover(function(){
+            
+         $("#classdemo h1").toggleClass("mycolor");
+        })    
+    $("#cancel").click(function(){
+        $("#txt").val('Hi');
+       $("#mytext").text("<i>hello</i>");
+        $("#classdemo h1").toggleClass("mycolor");  // Helper function
+       // $("#one").hide(100);
+         //$(".mystyle").hide(500);
+        $("#h1div div .mystyle").hide(1000);
+    }) ;   
+       $("button:first").click(function(){
+           $("#videodiv").show();
+          //document.getElementById("video1").play();
+            $("#video1")[0].play();
+/* $("div div div p span").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/zmATBwv4rI4" frameborder="0" allowfullscreen></iframe>');
+     */  }) 
+           
+    });
+    </script>
+</head>
+<body>
+<h1 id="mytext"></h1>
+<div id="classdemo">
+    <h1>Hello</h1>
+</div>
+<input type="text" id="txt">
+<div id="videodiv" style="display:none">
+ <video width="400" controls id="video1">
+  <source src="yuvi.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+ </div>
+  <div>
+      <div>
+          <div>
+              <p><span>Welcome</span></p>
+          </div>
+      </div>
+  </div>
+   <button>Ok</button>
+   <button id="cancel">Cancel</button>
+    <p onclick="$(this).fadeOut(1000)">Hello</p>
+    <div id="h1div">
+        <div>
+            <h1 id="on2e">One</h1>
+    <h1 class="mystyle">Two </h1>
+    <h1>Three</h1>
+    <h1 class="mystyle">Four</h1>
+    <h1 class="mystyle">Five</h1>
+        </div>
+    </div>
+    <h1 id="one">One</h1>
+    <h1 class="mystyle">Two </h1>
+    <h1>Three</h1>
+    <h1 class="mystyle">Four</h1>
+    <h1 class="mystyle">Five</h1>
+</body>
+</html>

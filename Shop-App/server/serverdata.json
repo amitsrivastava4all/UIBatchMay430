@@ -1,0 +1,4 @@
+
+[{"id":1001,"name":"Apple IPhone6s","desc":"Mobile Data","price":9999,"quantity":1,"rating":5,"url":"../images/apple.png"},
+{"id":1002,"name":"Samsung Galaxy","desc":"Mobile Data","price":9999,"quantity":1,"rating":5,"url":"../images/nokia.jpg"}
+]
