@@ -1,0 +1,57 @@
+<html>
+<head>
+   <style>
+       .red{
+         color: black;
+        background-color: red;   
+       }
+       .green{
+           background-color: green;
+       }
+    </style>
+    <script src="jquery-3.0.0.min.js"></script>
+    <script>
+    //$(document).ready(function(){    
+    $(function(){
+        $("table tr:odd").addClass("red");
+        $("table tr:even").addClass("green");
+        
+        
+        $("#btn").click(function(){
+        $("table").prepend("<tr><td>1009</td><td>"+$("#txtName").val()+"</td></tr>").hide().show(1000);
+          //  $("h1").html("Hi");
+        //$("h1").addClass("red");    
+        //$("h1").css("color","red");    
+    });
+        
+   /* $("#txtName").change(function(){
+       $("table tr:nth-child(3) td:nth-child(2)").html($("#txtName").val()); 
+    }); */   
+    })
+    </script>
+</head>
+<body>
+ <input type="text"  id="txtName">
+  <table>
+      <tr>
+          <td>Empno</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+          <td>1001</td>
+          <td>Ram</td>
+      </tr>
+      <tr>
+          <td>1002</td>
+          <td>Shyam</td>
+      </tr>
+      <tr>
+          <td>1003</td>
+          <td>Mike</td>
+      </tr>
+  </table>
+   <h1>Hello</h1>
+    <button id="btn">Click Me</button>
+</body>
+
+</html>

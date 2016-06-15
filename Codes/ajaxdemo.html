@@ -1,0 +1,26 @@
+<html>
+<head>
+   <script src="jquery-1.11.3.min.js"></script>
+    <script>
+    $(function(){
+       $("button").click(function(){
+           var promise = $.ajax({
+               url:'http://localhost:1234/callme',
+               method:'GET'
+               
+           });
+           promise.success(function(data){
+              $("h1").html(JSON.stringify(data)); 
+           });
+           promise.error(function(err){
+               $("h1").html(err);
+           })
+       }) ;
+    });
+    </script>
+</head>
+<body>
+    <button>Do Ajax Call</button>
+    <h1></h1>
+</body>
+</html>
